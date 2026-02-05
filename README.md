@@ -36,3 +36,14 @@ def main():
         print(check_palindrome(stre))
     
 main()
+
+```
+⏱ Time & Space Complexity (exam-ready)
+
+Time: O(n) per string
+
+Space: O(1) (no extra data structures)
+
+“I used the two-pointer technique, comparing characters from both ends and moving toward the center.”
+
+```
