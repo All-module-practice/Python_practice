@@ -58,3 +58,14 @@ Space: O(1) (no extra data structures)
 “I used the two-pointer technique, comparing characters from both ends and moving toward the center.”
 
 ```
+
+### program5.py
+
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        li=[]
+
+        for i in range(n):
+            li.append(nums[i])
+            li.append(nums[n+i])
+        return li
