@@ -69,3 +69,6 @@ class Solution:
             li.append(nums[i])
             li.append(nums[n+i])
         return li
+
+### program6.py
+
