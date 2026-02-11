@@ -72,7 +72,7 @@ class Solution:
 
 ### program6.py
 
-# cook your dish here
+```
 t=int(input())
 for i in range(t):
     n,a,b=map(int,input().split())
@@ -88,4 +88,42 @@ for i in range(t):
         elif num>b:
             wearing=False
     print(count)
+```
+
+### program7.py
+
+```
+def solution(text, ending):
+    # your code here...
     
+    list1=list(text)
+    list2=list(ending)
+    
+    
+    list3=list1[-len(list2):]
+    
+    
+    print(list3==list2)
+
+t1="samurai"
+e1="ai"
+
+solution(t1,e1)
+```
+
+#### Another approaches
+
+🧠 Even Simpler (No lists needed)
+
+Strings already support slicing:
+
+```
+def solution(text, ending):
+    return text[-len(ending):] == ending
+```
+
+```
+🔥 Cleanest Way (Best Practice)
+def solution(text, ending):
+    return text.endswith(ending)
+```
