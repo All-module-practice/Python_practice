@@ -1,16 +1,21 @@
 ### program1.py
 
+```
 print("-_-"*10+"| Hi,This is souvik |"+"-_-"*10)
+```
 
 ### program2.py (Codeforce style(with testcase))
 
+```
 t = int(input())
 for _ in range(t):
     a, b = map(int, input().split())
     print(a + b)
+```
 
 ### program3.py (character is present or not)
 
+```
 s = input()
 
 found = False
@@ -23,9 +28,11 @@ if found:
     print("YES")
 else:
     print("NO")
+```
 
 ### program4.py (palindrome number)
 
+```
 def check_palindrome(s):
     # Complete the function
     left=0
@@ -47,6 +54,7 @@ def main():
         print(check_palindrome(stre))
     
 main()
+```
 
 ```
 ⏱ Time & Space Complexity (exam-ready)
@@ -61,6 +69,7 @@ Space: O(1) (no extra data structures)
 
 ### program5.py
 
+```
 class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         li=[]
@@ -69,6 +78,7 @@ class Solution:
             li.append(nums[i])
             li.append(nums[n+i])
         return li
+```
 
 ### program6.py
 
