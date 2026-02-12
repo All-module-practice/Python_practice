@@ -127,3 +127,173 @@ def solution(text, ending):
 def solution(text, ending):
     return text.endswith(ending)
 ```
+
+### program8.py
+
+```
+📝 Notes – Ordering Words by Number in String
+🎯 Problem
+
+Given a sentence:
+
+"is2 Thi1s T4est 3a"
+
+
+Each word contains a number.
+We must arrange the words according to that number.
+
+Output:
+
+"Thi1s is2 3a T4est"
+
+🔎 Code Explanation Step-by-Step
+def order(sentence):
+
+
+👉 Define a function named order that takes one input: sentence.
+
+    if not sentence:
+        return ""
+
+
+👉 If the sentence is empty (""), return empty string.
+This prevents errors.
+
+    words = sentence.split()
+
+
+👉 .split() converts string into list of words.
+
+Example:
+
+"is2 Thi1s T4est 3a".split()
+
+
+Becomes:
+
+['is2', 'Thi1s', 'T4est', '3a']
+
+    l = len(words)
+
+
+👉 Count number of words.
+
+    list2 = [None] * l
+
+
+👉 Create an empty list with same size as words.
+
+Example:
+
+[None, None, None, None]
+
+
+We will place words in correct positions here.
+
+    for word in words:
+
+
+👉 Loop through each word.
+
+        for ch in word:
+
+
+👉 Loop through each character in the word.
+
+Example:
+
+"Thi1s" → T, h, i, 1, s
+
+            if ch.isdigit():
+
+
+👉 Check if character is a number.
+
+                num = int(ch)
+
+
+👉 Convert the digit from string to integer.
+
+Example:
+
+"1" → 1
+
+                list2[num - 1] = word
+
+
+👉 Place the word in correct position.
+
+Why num - 1?
+
+Because:
+
+List index starts from 0
+
+But numbers start from 1
+
+Example:
+If number is 1, position should be index 0.
+
+                break
+
+
+👉 Stop checking once number is found.
+
+    stre = " ".join(list2)
+
+
+👉 Join list back into a string with spaces.
+
+Example:
+
+['Thi1s', 'is2', '3a', 'T4est']
+
+
+Becomes:
+
+"Thi1s is2 3a T4est"
+
+    return stre
+
+
+👉 Return the final ordered sentence.
+
+🧠 Important Concepts Used
+
+✔ Functions
+✔ if condition
+✔ for loops
+✔ Nested loops
+✔ String iteration
+✔ .isdigit()
+✔ List indexing
+✔ .split()
+✔ " ".join()
+✔ break statement
+```
+
+code:
+
+```
+def order(sentence):
+    if not sentence:
+        return ""
+    words=sentence.split()
+    l=len(words)
+    list2=[None]*l
+    for word in words:
+        for ch in word:
+            if ch.isdigit():
+                num=int(ch)
+                list2[num-1]=word
+                break
+    stre=" ".join(list2)
+    return stre
+    pass
+
+
+sen="is2 Thi1s T4est 3a"
+num=order(sen)
+
+print(num)
+```
