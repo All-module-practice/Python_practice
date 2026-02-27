@@ -9,3 +9,15 @@
 # There will always be at least one number in the input string.
 # Output string must be two numbers separated by a single space, and highest number is first.
 
+def high_and_low(numbers):
+    # ...
+    num=numbers.split()
+    larger=int(num[0])
+    smaller=int(num[0])
+    for i in num:
+        nume=int(i)
+        if larger<nume:
+            larger=nume
+        elif smaller>nume:
+            smaller=nume
+    return f"{larger} {smaller}"
