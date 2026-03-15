@@ -8,3 +8,13 @@
 
 # Happy Coding!
 
+def square_digits(num):
+    # Your code here
+    s=str(num)
+    li=[]
+    for i in s:
+        n=int(i)
+        li.append(str(n*n))
+    num="".join(li)
+    num=int(num)
+    return num
