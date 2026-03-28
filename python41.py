@@ -6,4 +6,7 @@
 #The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
 
 def twice_as_old(dad_years_old, son_years_old):
-    pass
+    age=dad_years_old-(son_years_old*2)
+    if age<0:
+        age=age*(-1)
+    return age
