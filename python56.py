@@ -22,17 +22,12 @@ def nb_dig(n, d):
     
     for i in range(n+1):
         square_arr.append(i*i)
-        
+    
     count=0
+    if d==0:
+        count=1
     
     for i in square_arr:
-        if i%100==0 and d==0:
-            strnum=str(d)
-            num=str(i)
-            for j in num:
-                if j==strnum:
-                    count+=1
-            continue
         while i!=0:
             digit=i%10
             if digit==d:
