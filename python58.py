@@ -5,3 +5,16 @@
 # It’s guaranteed that array contains at least 3 numbers.
 
 # The tests contain some very huge arrays, so think about performance.
+
+def find_uniq(arr):
+    # your code here
+    dicte={}
+    for i in arr:
+        if i in dicte:
+            dicte[i]+=1
+        else:
+            dicte[i]=1
+    for k,val in dicte.items():
+        if val==1:
+            return k
+    return 1   # n: unique number in the array
