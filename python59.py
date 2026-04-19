@@ -24,3 +24,31 @@
 # a or b might be nil or null or None or nothing (except in C++, COBOL, Crystal, D, Dart, Elixir, Fortran, F#, Haskell, Nim, OCaml, Pascal, Perl, PowerShell, Prolog, PureScript, R, Racket, Rust, Shell, Swift).
 # If a or b are nil (or null or None, depending on the language), the problem doesn't make sense so return false.
 
+def comp(array1, array2):
+    # your code
+    if array1 is None or array2 is None:
+        return False
+    
+    if len(array1)!=len(array2):
+        return False
+    
+    dicte={}
+    for i in array2:
+        if i in dicte:
+            dicte[i]+=1
+        else:
+            dicte[i]=1
+            
+    for i in array1:
+        i=i*i
+        if i not in dicte:
+            return False
+        
+        else:
+            if dicte[i]<1:
+                return False
+            
+            else:
+                dicte[i]-=1
+        
+    return True
