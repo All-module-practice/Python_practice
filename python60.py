@@ -5,4 +5,13 @@
 # findNb(1071225) --> 45 findNb(91716553919377) --> -1
 
 def find_nb(m):
+    def find_nb(m):
+    sum=0
+    count=1
+    while sum<m:
+        sum+=count**3
+        if sum==m:
+            return count
+        count+=1
+    return -1
     pass
