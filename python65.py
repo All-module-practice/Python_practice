@@ -11,3 +11,13 @@
 # 0      -> 0
 # Note: Zero should be left as it is.
 
+def no_boring_zeros(n):
+    # your code
+    if n==0:
+        return n
+    while True:
+        if n%10==0:
+            n//=10
+        else:
+            break
+    return n
